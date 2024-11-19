@@ -1,25 +1,46 @@
 {% extends 'shop/basic.html' %}
+{% load static %}
 
-{% block title%} About Us{% endblock %}
+{% block title %} About Us {% endblock %}
+
 {% block body %}
 
-<div _ngcontent-serverapp-c2="" class="about col-md-12"><div _ngcontent-serverapp-c2="" class="text-center">
-    <img _ngcontent-serverapp-c2="" alt="flipkart Ads" src="https://flipkartads.azureedge.net/flipkartads/Catapilt-Logo.png">
+
+<div class="full-screen-bg">
+    <!-- Full-screen background image -->
+    <img src="{% static 'images/about_logo.jpg' %}" class="bg-image" alt="Background">
+
+    <!-- Semi-transparent overlay -->
+    <div class="full-screen-overlay"></div>
+
+    <!-- Text content on top -->
+    <div class="overlay-content">
+        <h1>About Us</h1>
+        <p>
+            Welcome to <strong>Our E-Commerce Website</strong>, your one-stop shop for all your needs. 
+            We aim to provide you with the best products at competitive prices, 
+            ensuring a seamless shopping experience.
+        </p>
+        <p>
+            Our mission is to deliver quality, convenience, and satisfaction through a platform that 
+            connects you with the latest and best items available in the market. Whether you're 
+            looking for electronics, fashion, or home essentials, we’ve got it all!
+        </p>
+        <h3>Why Shop With Us?</h3>
+        <ul>
+            <li>Wide range of quality products</li>
+            <li>Secure and user-friendly platform</li>
+            <li>24/7 customer support</li>
+            <li>Fast and reliable delivery</li>
+        </ul>
+        <p>
+            Thank you for choosing us as your trusted shopping destination. We are committed to making your 
+            experience exceptional and memorable. Happy shopping!
+        </p>
+    </div>
 </div>
-<p _ngcontent-serverapp-c2="">The Flipkart Group is one of India's leading digital commerce entities and
-     includes group companies Flipkart, Myntra, Flipkart Wholesale, Flipkart Health+ and Cleartrip.
-      The Group is also a majority shareholder in PhonePe, one of the leading Payments Apps in India.</p>
-<p _ngcontent-serverapp-c2="">Started in 2007, Flipkart has enabled millions of consumers, sellers,
-     merchants, and small businesses to be a part of India's digital commerce revolution, with a registered customer base of more than 400 million, 
-     offering over 150 million products across 80+ categories. Our efforts to democratize commerce in India, drive access and affordability, delight customers,
-      create lakhs of jobs in the ecosystem, and empower generations of entrepreneurs and MSMEs have inspired us to innovate on many industry firsts. Flipkart is
-       known for pioneering services such as Cash on Delivery, No Cost EMI and easy returns – customer-centric innovations have made online shopping more 
-       accessible and affordable for millions of Indians. Together with its group companies, Flipkart is committed to transforming commerce in India through technology.</p>
-<p _ngcontent-serverapp-c2="">With Catapult, Flipkart aims to provide an umbrella solution to a budding brand's financing &amp; marketing needs. The program offers
-     marketing solutions and capital for new age direct-to-consumer brands to leapfrog into their next phase of growth. The offering goes beyond financing the brands 
-     by providing creative services and effective acquisition cost reduction solutions.</p><p _ngcontent-serverapp-c2="">For more information on the <img _ngcontent-serverapp-c2="" 
-        alt="flipkart Ads" src="https://flipkartads.azureedge.net/flipkartads/Catapilt-Logo.png">
-         kindly write to us at <a _ngcontent-serverapp-c2="" href="mailto:catapult@flipkart.com">catapult@flipkart.com</a></p><p _ngcontent-serverapp-c2="">To know more about the
-             ad experiences being offered by Flipkart, visit <a _ngcontent-serverapp-c2="" href="https://brands.flipkart.com/">brands.flipkart.com</a></p></div>
+
+<!-- Add the About page-specific CSS -->
+<link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
 
 {% endblock %}

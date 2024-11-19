@@ -1,0 +1,43 @@
+/* Full-screen background container with semi-transparent overlay */
+.full-screen-bg {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Full-screen background image */
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales properly */
+    z-index: 1;
+}
+
+/* Full-screen semi-transparent overlay */
+.full-screen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full screen */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 2; /* Above the image */
+}
+
+/* Text overlay on the transparent layer */
+.overlay-content {
+    position: relative;
+    z-index: 3; /* Above the semi-transparent background */
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 10px;
+}
